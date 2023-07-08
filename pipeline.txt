@@ -15,8 +15,8 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t jenkins .'
-                    sh 'docker run -it -d --name="jenkins" -p 8081:8081 jenkins'
+                    sh 'docker build -t jenkinsimage .'
+                    sh 'docker run -it -d --name="jenkinsdocker" -p 8081:8081 jenkinsimage'
                 }
             }
         }
