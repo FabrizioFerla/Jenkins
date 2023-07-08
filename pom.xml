@@ -49,7 +49,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>Jenkins</finalName>
+		<finalName>jenkins</finalName>
 	</build>
 
 </project>
