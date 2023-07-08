@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build Maven') {
             steps {
-               checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/FabrizioFerla/start.git']])
+               checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/FabrizioFerla/Jenkins.git']])
                sh 'mvn clean install'
             }
 
@@ -16,7 +16,7 @@ pipeline {
             steps{
                 script{
                     sh 'docker build -t test .'
-                    sh 'docker run -it -d --name="test" -p 8081:8081 test'
+                    sh 'docker run -it -d --name="Jenkons" -p 8081:8081 Jenkins'
                 }
             }
         }
