@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class JenkinsController {
 
-    @RequestMapping(name = "/hello")
+    @RequestMapping(value = "hello")
     public String getHello(){
         return "Ciao a tutti";
     }
